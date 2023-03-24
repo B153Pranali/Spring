@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+        <bean id="d" class="com.model.Dealer">
+        <constructor-arg name="dealerId" value="1"></constructor-arg>
+        <constructor-arg name="dealerName" value="Pranali"></constructor-arg>
+        <constructor-arg name="dealerMobile" value="73763267898"></constructor-arg>
+        </bean>
+        
+        <bean id="sup" class="com.model.Supplier">
+        <constructor-arg name="supId" value="1"></constructor-arg>
+        <constructor-arg name="supName" value="Pranali"></constructor-arg>
+        <constructor-arg name="supMobile" value="73763267898"></constructor-arg>
+        <constructor-arg name="cities">
+        <list>
+        <value>pune</value>
+        </list>
+        </constructor-arg>
+        </bean>
+        
+         <bean id="p1" class="com.model.Product">
+        <constructor-arg name="productId" value="122"></constructor-arg>
+        <constructor-arg name="productName" value="Pv"></constructor-arg>
+        <constructor-arg name="productPrice" value="7898"></constructor-arg>
+        <constructor-arg name="ld">
+        <list>
+        <ref bean="d"/>
+        </list>
+        </constructor-arg>
+        <constructor-arg name="ms">
+        <map>
+        <entry key="11" value-ref="sup"></entry>
+        </map>
+        </constructor-arg>
+        </bean>
+        </beans>

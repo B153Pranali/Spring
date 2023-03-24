@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+        <bean id="d" class="com.model.Dealer">
+        <property name="dealerId" value="1"></property>
+        <property name="dealerName" value="Pranali"></property>
+        <property name="dealerMobile" value="73763267898"></property>
+        </bean>
+        
+        <bean id="sup" class="com.model.Supplier">
+        <property name="supId" value="1"></property>
+        <property name="supName" value="Pranali"></property>
+        <property name="supMobile" value="73763267898"></property>
+        <property name="cities">
+        <list>
+        <value>pune</value>
+        </list>
+        </property>
+        </bean>
+        
+         <bean id="p" class="com.model.Product">
+        <property name="productId" value="122"></property>
+        <property name="productName" value="Pv"></property>
+        <property name="productPrice" value="7898"></property>
+        <property name="ld">
+        <list>
+        <ref bean="d"/>
+        </list>
+        </property>
+        <property name="ms">
+        <map>
+        <entry key="11" value-ref="sup"></entry>
+        </map>
+        </property>
+        </bean>
+        </beans>

@@ -19,7 +19,9 @@ p1.getLd().forEach(s1->System.out.println(s1.getDealerId()));
 p1.getLd().forEach(s1->System.out.println(s1.getDealerName()));
 p1.getLd().forEach(s1->System.out.println(s1.getDealerMobile()));
 p1.getMs().forEach((k,v)->{System.out.println(k+" "+v.getSupId());
-System.out.println(v.getSupName());});
+System.out.println(k+" "+v.getSupName());
+System.out.println(v.getSupMobile());
+v.getCities().forEach(c->System.out.println(c));});
 	}
 
 }
